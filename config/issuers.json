@@ -1,0 +1,228 @@
+{
+  "_комментарий": [
+    "Справочник эмитентов для Таблицы №1 и настроек парсинга.",
+    "Динамика (дивиденды, цены, названия, ISIN) тянется из сети — здесь её НЕТ.",
+    "Здесь только то, чего нет в открытых API: ссылка на сайт и председатель СД /",
+    "крупнейший акционер. Эти поля правятся руками — при смене председателя",
+    "достаточно поправить строку, код трогать не нужно.",
+    "Поле 'issuer_key' объединяет ао и ап одного эмитента в один лист Excel:",
+    "30 строк тикеров -> 28 листов, как требует ТЗ.",
+    "'smartlab_page' — на какой странице smart-lab искать строки этого тикера",
+    "(у привилегированных своей страницы нет).",
+    "'moex_aliases' — запасные коды на случай переименования тикера биржей."
+  ],
+  "справочные_данные_проверены": "2026-09-04",
+  "предупреждение": "Поля site и chairman — справочные, требуют сверки с сайтом эмитента перед отправкой заказчику.",
+  "issuers": [
+    {
+      "no": 1, "ticker": "SBER", "name": "Сбербанк", "share_type": "Обыкновенная",
+      "issuer_key": "SBER", "smartlab_page": "SBER", "dohod_slug": "sber",
+      "moex_aliases": [],
+      "site": "https://www.sberbank.com/ru/investor-relations",
+      "chairman": "Наблюдательный совет — председатель Антон Силуанов; крупнейший акционер — Правительство РФ (Минфин), 50% + 1 акция"
+    },
+    {
+      "no": 2, "ticker": "SBERP", "name": "Сбербанк-п", "share_type": "Привилегированная",
+      "issuer_key": "SBER", "smartlab_page": "SBER", "dohod_slug": "sberp",
+      "moex_aliases": [],
+      "site": "https://www.sberbank.com/ru/investor-relations",
+      "chairman": "Наблюдательный совет — председатель Антон Силуанов; крупнейший акционер — Правительство РФ (Минфин), 50% + 1 акция"
+    },
+    {
+      "no": 3, "ticker": "ROSN", "name": "Роснефть", "share_type": "Обыкновенная",
+      "issuer_key": "ROSN", "smartlab_page": "ROSN", "dohod_slug": "rosn",
+      "moex_aliases": [],
+      "site": "https://www.rosneft.ru/Investors/",
+      "chairman": "Председатель СД — Александр Некипелов; крупнейший акционер — АО «РОСНЕФТЕГАЗ» (~40,4%)"
+    },
+    {
+      "no": 4, "ticker": "LKOH", "name": "ЛУКОЙЛ", "share_type": "Обыкновенная",
+      "issuer_key": "LKOH", "smartlab_page": "LKOH", "dohod_slug": "lkoh",
+      "moex_aliases": [],
+      "site": "https://lukoil.ru/InvestorAndShareholderCenter",
+      "chairman": "Крупнейшие акционеры — менеджмент и структуры компании; исторически крупнейший держатель — В. Ю. Алекперов (~28%)"
+    },
+    {
+      "no": 5, "ticker": "SIBN", "name": "Газпром нефть", "share_type": "Обыкновенная",
+      "issuer_key": "SIBN", "smartlab_page": "SIBN", "dohod_slug": "sibn",
+      "moex_aliases": [],
+      "site": "https://ir.gazprom-neft.ru/",
+      "chairman": "Председатель СД — Алексей Миллер; крупнейший акционер — ПАО «Газпром» (~95,7%)"
+    },
+    {
+      "no": 6, "ticker": "NVTK", "name": "НОВАТЭК", "share_type": "Обыкновенная",
+      "issuer_key": "NVTK", "smartlab_page": "NVTK", "dohod_slug": "nvtk",
+      "moex_aliases": [],
+      "site": "https://www.novatek.ru/ru/investors/",
+      "chairman": "Крупнейший акционер — Л. В. Михельсон (~24,8%); также структуры Г. Н. Тимченко (~23%)"
+    },
+    {
+      "no": 7, "ticker": "GAZP", "name": "Газпром", "share_type": "Обыкновенная",
+      "issuer_key": "GAZP", "smartlab_page": "GAZP", "dohod_slug": "gazp",
+      "moex_aliases": [],
+      "site": "https://www.gazprom.ru/investors/",
+      "chairman": "Председатель СД — Виктор Зубков; крупнейший акционер — Российская Федерация (свыше 50% с учётом Росимущества, «Роснефтегаза» и «Росгазификации»)"
+    },
+    {
+      "no": 8, "ticker": "GMKN", "name": "ГМК Норильский никель", "share_type": "Обыкновенная",
+      "issuer_key": "GMKN", "smartlab_page": "GMKN", "dohod_slug": "gmkn",
+      "moex_aliases": [],
+      "site": "https://www.nornickel.ru/investors/",
+      "chairman": "Крупнейший акционер — В. О. Потанин через «Интеррос» (~37%); второй — UC Rusal (~26%)"
+    },
+    {
+      "no": 9, "ticker": "PLZL", "name": "Полюс", "share_type": "Обыкновенная",
+      "issuer_key": "PLZL", "smartlab_page": "PLZL", "dohod_slug": "plzl",
+      "moex_aliases": [],
+      "site": "https://polyus.com/ru/investors/",
+      "chairman": "Крупнейший акционер — ООО «Группа Акрополь» / А. М. Паланкоев (~46%)"
+    },
+    {
+      "no": 10, "ticker": "T", "name": "Т-Технологии (Т-Банк)", "share_type": "Обыкновенная",
+      "issuer_key": "T", "smartlab_page": "T", "dohod_slug": "t",
+      "moex_aliases": ["TCSG"],
+      "site": "https://www.tbank.ru/ir/",
+      "chairman": "Крупнейший акционер — В. О. Потанин через «Интеррос» (~35%)"
+    },
+    {
+      "no": 11, "ticker": "YDEX", "name": "Яндекс", "share_type": "Обыкновенная",
+      "issuer_key": "YDEX", "smartlab_page": "YDEX", "dohod_slug": "ydex",
+      "moex_aliases": ["YNDX"],
+      "site": "https://ir.yandex.ru/",
+      "chairman": "Крупнейший акционер — ЗПИФ «Консорциум.Первый» (структура менеджмента и партнёров)"
+    },
+    {
+      "no": 12, "ticker": "CHMF", "name": "Северсталь", "share_type": "Обыкновенная",
+      "issuer_key": "CHMF", "smartlab_page": "CHMF", "dohod_slug": "chmf",
+      "moex_aliases": [],
+      "site": "https://severstal.com/rus/ir/",
+      "chairman": "Председатель СД и крупнейший акционер — А. А. Мордашов со структурами (~77%)"
+    },
+    {
+      "no": 13, "ticker": "NLMK", "name": "НЛМК", "share_type": "Обыкновенная",
+      "issuer_key": "NLMK", "smartlab_page": "NLMK", "dohod_slug": "nlmk",
+      "moex_aliases": [],
+      "site": "https://nlmk.com/ru/ir/",
+      "chairman": "Председатель СД и крупнейший акционер — В. С. Лисин через Fletcher Group (~79%)"
+    },
+    {
+      "no": 14, "ticker": "MGNT", "name": "Магнит", "share_type": "Обыкновенная",
+      "issuer_key": "MGNT", "smartlab_page": "MGNT", "dohod_slug": "mgnt",
+      "moex_aliases": [],
+      "site": "https://www.magnit.com/ru/shareholders-and-investors/",
+      "chairman": "Крупнейший акционер — Marathon Group (А. С. Винокуров), около 29%"
+    },
+    {
+      "no": 15, "ticker": "MAGN", "name": "ММК", "share_type": "Обыкновенная",
+      "issuer_key": "MAGN", "smartlab_page": "MAGN", "dohod_slug": "magn",
+      "moex_aliases": [],
+      "site": "https://mmk.ru/ru/investor/",
+      "chairman": "Председатель СД и крупнейший акционер — В. Ф. Рашников (~79%)"
+    },
+    {
+      "no": 16, "ticker": "RUAL", "name": "РУСАЛ", "share_type": "Обыкновенная",
+      "issuer_key": "RUAL", "smartlab_page": "RUAL", "dohod_slug": "rual",
+      "moex_aliases": [],
+      "site": "https://rusal.ru/investors/",
+      "chairman": "Крупнейший акционер — МКПАО «ЭН+ ГРУП» (~57%)"
+    },
+    {
+      "no": 17, "ticker": "MOEX", "name": "Московская Биржа", "share_type": "Обыкновенная",
+      "issuer_key": "MOEX", "smartlab_page": "MOEX", "dohod_slug": "moex",
+      "moex_aliases": [],
+      "site": "https://www.moex.com/s1400",
+      "chairman": "Председатель наблюдательного совета — Сергей Швецов; крупный акционер — ВЭБ.РФ (~8%), высокий free-float"
+    },
+    {
+      "no": 18, "ticker": "PIKK", "name": "ПИК СЗ", "share_type": "Обыкновенная",
+      "issuer_key": "PIKK", "smartlab_page": "PIKK", "dohod_slug": "pikk",
+      "moex_aliases": [],
+      "site": "https://pik-group.ru/investors",
+      "chairman": "Крупнейший акционер — С. Э. Гордеев (доля снижалась с ~59% до ~15%)"
+    },
+    {
+      "no": 19, "ticker": "VTBR", "name": "ВТБ", "share_type": "Обыкновенная",
+      "issuer_key": "VTBR", "smartlab_page": "VTBR", "dohod_slug": "vtbr",
+      "moex_aliases": [],
+      "site": "https://www.vtb.ru/akcionery-i-investory/",
+      "chairman": "Председатель наблюдательного совета — Антон Силуанов; крупнейший акционер — Росимущество / Минфин (~61%)"
+    },
+    {
+      "no": 20, "ticker": "ALRS", "name": "АЛРОСА", "share_type": "Обыкновенная",
+      "issuer_key": "ALRS", "smartlab_page": "ALRS", "dohod_slug": "alrs",
+      "moex_aliases": [],
+      "site": "https://www.alrosa.ru/investors/",
+      "chairman": "Председатель наблюдательного совета — Антон Алиханов; акционеры — Росимущество (~33%) и Республика Саха (Якутия) (~25%)"
+    },
+    {
+      "no": 21, "ticker": "BSPB", "name": "Банк Санкт-Петербург", "share_type": "Обыкновенная",
+      "issuer_key": "BSPB", "smartlab_page": "BSPB", "dohod_slug": "bspb",
+      "moex_aliases": [],
+      "site": "https://www.bspb.ru/investors/",
+      "chairman": "Крупнейший акционер — А. В. Савельев (около 25%)"
+    },
+    {
+      "no": 22, "ticker": "BSPBP", "name": "Банк Санкт-Петербург-п", "share_type": "Привилегированная",
+      "issuer_key": "BSPB", "smartlab_page": "BSPB", "dohod_slug": "bspbp",
+      "moex_aliases": [],
+      "site": "https://www.bspb.ru/investors/",
+      "chairman": "Крупнейший акционер — А. В. Савельев (около 25%)"
+    },
+    {
+      "no": 23, "ticker": "IRAO", "name": "Интер РАО", "share_type": "Обыкновенная",
+      "issuer_key": "IRAO", "smartlab_page": "IRAO", "dohod_slug": "irao",
+      "moex_aliases": [],
+      "site": "https://www.interrao.ru/investors/",
+      "chairman": "Председатель СД — Игорь Сечин; крупнейшие держатели — АО «Интер РАО Капитал» (~29,4%) и АО «Роснефтегаз» (~27,6%)"
+    },
+    {
+      "no": 24, "ticker": "SVCB", "name": "Совкомбанк", "share_type": "Обыкновенная",
+      "issuer_key": "SVCB", "smartlab_page": "SVCB", "dohod_slug": "svcb",
+      "moex_aliases": [],
+      "site": "https://sovcombank.ru/investors",
+      "chairman": "Контролирующие акционеры — братья Сергей и Дмитрий Хотимские с партнёрами"
+    },
+    {
+      "no": 25, "ticker": "RTKM", "name": "Ростелеком", "share_type": "Обыкновенная",
+      "issuer_key": "RTKM", "smartlab_page": "RTKM", "dohod_slug": "rtkm",
+      "moex_aliases": [],
+      "site": "https://www.company.rt.ru/ir/",
+      "chairman": "Крупнейший акционер — Росимущество (~38,2%), с учётом ВТБ и «Мобител» государство контролирует более 50%"
+    },
+    {
+      "no": 26, "ticker": "HYDR", "name": "РусГидро", "share_type": "Обыкновенная",
+      "issuer_key": "HYDR", "smartlab_page": "HYDR", "dohod_slug": "hydr",
+      "moex_aliases": [],
+      "site": "https://www.rushydro.ru/investors/",
+      "chairman": "Председатель СД — Юрий Трутнев; крупнейший акционер — Росимущество (~62%)"
+    },
+    {
+      "no": 27, "ticker": "AFLT", "name": "Аэрофлот", "share_type": "Обыкновенная",
+      "issuer_key": "AFLT", "smartlab_page": "AFLT", "dohod_slug": "aflt",
+      "moex_aliases": [],
+      "site": "https://ir.aeroflot.ru/",
+      "chairman": "Председатель СД — Виталий Савельев; крупнейший акционер — Росимущество (~73,8%)"
+    },
+    {
+      "no": 28, "ticker": "AFKS", "name": "АФК Система", "share_type": "Обыкновенная",
+      "issuer_key": "AFKS", "smartlab_page": "AFKS", "dohod_slug": "afks",
+      "moex_aliases": [],
+      "site": "https://sistema.ru/investoram",
+      "chairman": "Председатель СД — Феликс Евтушенков; крупнейший акционер — В. П. Евтушенков (~49%)"
+    },
+    {
+      "no": 29, "ticker": "FEES", "name": "Россети", "share_type": "Обыкновенная",
+      "issuer_key": "FEES", "smartlab_page": "FEES", "dohod_slug": "fees",
+      "moex_aliases": [],
+      "site": "https://www.rosseti.ru/investors/",
+      "chairman": "Председатель СД — Александр Новак; крупнейший акционер — Росимущество (~75%)"
+    },
+    {
+      "no": 30, "ticker": "SMLT", "name": "Самолет", "share_type": "Обыкновенная",
+      "issuer_key": "SMLT", "smartlab_page": "SMLT", "dohod_slug": "smlt",
+      "moex_aliases": [],
+      "site": "https://samolet.ru/invest/",
+      "chairman": "Крупнейший акционер — М. Ю. Кенин (около 31%)"
+    }
+  ]
+}

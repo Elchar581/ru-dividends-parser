@@ -1,0 +1,6 @@
+.cache/
+output/*.xlsx
+output/run.log
+__pycache__/
+*.pyc
+.venv/
